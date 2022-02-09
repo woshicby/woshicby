@@ -1,7 +1,7 @@
 - 👋 Hi, I’m @woshicby
 - 🌱 I’m currently learning Python and Machine Learning
 
-Here are just some code for practice.
+Just some code for practice here.
 
 <!---
 woshicby/woshicby is a ✨ special ✨ repository because its `README.md` (this file) appears on your GitHub profile.
