@@ -2,12 +2,12 @@ import turtle  # 画图用turtle包
 
 
 def snow(n, size):  # n为阶数，size为长度，从当前起点出发，在当前方向画一个长度为size，阶为n的雪花曲线
-    if n == 0:
-        turtle.fd(size)  # 笔沿当前方向前进size
-    else:
-        for angle in [0, 60, -120, 60]:  # 对列表中的每个元素angle
-            turtle.left(angle)  # 笔左转angle度，turtle.lt(angle)也行
-            snow(n - 1, size / 3)
+	if n == 0:
+		turtle.fd(size)  # 笔沿当前方向前进size
+	else:
+		for angle in [0, 60, -120, 60]:  # 对列表中的每个元素angle
+			turtle.left(angle)  # 笔左转angle度，turtle.lt(angle)也行
+			snow(n - 1, size / 3)
 
 
 turtle.setup(1000, 600)
