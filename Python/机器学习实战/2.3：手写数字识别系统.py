@@ -41,8 +41,8 @@ def hand_writing_class_test():  # 手写分类器测试代码
     training_mat = numpy.zeros((m, 1024))  # 初始化训练矩阵（一行一个图像）
     for i in range(m):  # 逐个从文件名中解析出正确数字
         file_name_str = training_file_list[i]  # 获取第i个文件名
-        file_str = file_name_str.split('.')[0]  # 得到第一个.之前的内容
-        class_num_int = int(file_str.split('_')[0])  # 得到第一个.之前的内容（转为int）
+        # file_str = file_name_str.split('.')[0]  # 得到第一个.之前的内容
+        class_num_int = int(file_name_str.split('_')[0])  # 得到第一个.之前的内容（转为int）
         hw_labels.append(class_num_int)  # 加入标签列表
         training_mat[i, :] = img2vector(trainingDigits + '/%s' % file_name_str)  # 加入训练矩阵
     test_file_list = os.listdir(testDigits)  # 获取测试目录的全部文件名
@@ -51,8 +51,8 @@ def hand_writing_class_test():  # 手写分类器测试代码
     for i in range(m_test):
         # 逐个从文件名中解析出正确数字
         file_name_str = test_file_list[i]  # 获取第i个文件名
-        file_str = file_name_str.split('.')[0]  # 得到第一个.之前的内容
-        class_num_int = int(file_str.split('_')[0])  # 得到第一个.之前的内容（转为int）
+        # file_str = file_name_str.split('.')[0]  # 得到第一个.之前的内容
+        class_num_int = int(file_name_str.split('_')[0])  # 得到第一个.之前的内容（转为int）
         vector_under_test = img2vector(testDigits + '/%s' % file_name_str)  # 获取一个测试向量
         classifier_result = classify0(vector_under_test, training_mat, hw_labels, 3)  # 进k近邻分类器
         if classifier_result == class_num_int:
