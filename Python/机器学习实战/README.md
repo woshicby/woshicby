@@ -5,3 +5,5 @@
 书籍Python 3源代码：<https://github.com/pbharrin/machinelearninginaction3x>  
 ApacheCN_机器学习实战_教学版：<https://www.bilibili.com/video/BV1dL4y1b7gi>  
 ApacheCN_机器学习实战_讨论版：<https://www.bilibili.com/video/BV1dr4y1k7r4>  
+ApacheCN【机器学习实战】第二期-教学版本源代码：<https://github.com/apachecn/ailearning/releases/tag/v2.0>  
+ApacheCN【机器学习实战】第一期-讨论版本源代码：<https://github.com/apachecn/ailearning/releases/tag/v1.0>
