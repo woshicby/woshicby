@@ -29,6 +29,5 @@ def create_data_set():  # 创建并返回数据集和标签
 Group, Labels = create_data_set()
 for i in range(10):
     for j in range(10):
-        print('k近邻算法（k=3）对[' + str(i / 10) + ',' + str(j / 10) + ']得出的结果为:',
-              classify0(numpy.array([i / 10, j / 10]), Group, Labels, 3))
+        print('k近邻算法（k=3）对[' + str(i / 10) + ',' + str(j / 10) + ']得出的结果为:', classify0(numpy.array([i / 10, j / 10]), Group, Labels, 3))
 print('k近邻算法（k=3）对[0.55,0.55]得出的结果为:', classify0([0.55, 0.55], Group, Labels, 3))
