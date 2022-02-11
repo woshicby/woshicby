@@ -1,6 +1,5 @@
 import math
 import operator
-
 # #####设置区域#####
 filePath = r'D:\Desktop\新建文件夹\machinelearninginaction3x-master\Ch03'  # 生成树的存储路径
 fileName = 'MyTree.tree'  # 存储生成树的文件名
