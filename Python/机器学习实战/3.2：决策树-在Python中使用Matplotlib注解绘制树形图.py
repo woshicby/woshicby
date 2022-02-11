@@ -2,9 +2,19 @@ import math
 import operator
 import matplotlib
 import matplotlib.pyplot as plt
+# #####设置区域#####
+# 设置路径
+filePath = r'D:\Desktop\新建文件夹\machinelearninginaction3x-master\Ch03'  # 生成树的存储路径
+fileName = 'MyTree.txt'  # 存储生成树的文件名
+sourceFilePath = r'D:\Desktop\新建文件夹\machinelearninginaction3x-master\Ch03\lenses.txt'  # 隐形眼镜数据源文件路径
+# 定义文本框和箭头格式
+decision_node = dict(boxstyle="sawtooth", fc="0.8")
+leaf_node = dict(boxstyle="round4", fc="0.8")
+arrow_args = dict(arrowstyle="<-")
 
 
 # #####函数声明区域#####
+
 def create_data_set():  # 生成简单的鱼鉴定数据集
     data_set = [[1, 1, '是'],
                 [1, 1, '是'],
@@ -249,10 +259,6 @@ def plot_tree(my_tree, parent_pt, node_txt):  # 画子树函数
 # #####以上是绘图函数#####
 # #####运行区域#####
 myDat, Labels = create_data_set()
-# 定义文本框和箭头格式
-decision_node = dict(boxstyle="sawtooth", fc="0.8")
-leaf_node = dict(boxstyle="round4", fc="0.8")
-arrow_args = dict(arrowstyle="<-")
 # 测试绘图
 # print('retrieve_tree(0)的叶节点总数为：', get_num_leafs(retrieve_tree(0)))
 # print('retrieve_tree(0)的树高为：', get_tree_depth(retrieve_tree(0)+1))
