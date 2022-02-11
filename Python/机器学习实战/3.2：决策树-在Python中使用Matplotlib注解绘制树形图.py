@@ -3,10 +3,6 @@ import operator
 import matplotlib
 import matplotlib.pyplot as plt
 # #####设置区域#####
-# 设置路径
-filePath = r'D:\Desktop\新建文件夹\machinelearninginaction3x-master\Ch03'  # 生成树的存储路径
-fileName = 'MyTree.txt'  # 存储生成树的文件名
-sourceFilePath = r'D:\Desktop\新建文件夹\machinelearninginaction3x-master\Ch03\lenses.txt'  # 隐形眼镜数据源文件路径
 # 定义文本框和箭头格式
 decision_node = dict(boxstyle="sawtooth", fc="0.8")
 leaf_node = dict(boxstyle="round4", fc="0.8")
