@@ -9,8 +9,6 @@
 #    添加了用基尼不纯度代替信息熵的一系列函数
 #    More output to observing the value of variables.
 #    更多输出来观察变量的值
-
-
 import math
 import operator
 
