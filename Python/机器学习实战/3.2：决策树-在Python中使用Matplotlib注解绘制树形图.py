@@ -8,7 +8,7 @@ import matplotlib.pyplot as plt
 def create_data_set():  # 生成简单的鱼鉴定数据集
     data_set = [[1, 1, '是'],
                 [1, 1, '是'],
-                [1, 0, '不是'],
+                [1, 0, '可能是'],
                 [0, 1, '不是'],
                 [0, 1, '不是']]
     labels = ['不浮出水面', '有脚蹼']
@@ -195,7 +195,7 @@ def retrieve_tree(i):  # 预先存储树的信息（用于测试）
 def plot_mid_text(cntr_pt, parent_pt, txt_string):  # 在父与子节点中间填充文本信息
     x_mid = (parent_pt[0] - cntr_pt[0]) / 2.0 + cntr_pt[0]
     y_mid = (parent_pt[1] - cntr_pt[1]) / 2.0 + cntr_pt[1]
-    create_plot.ax1.text(x_mid, y_mid, txt_string, va="center", ha="center", rotation=30)
+    create_plot.ax1.text(x_mid, y_mid+0.03, txt_string, va="center", ha="center", rotation=0)
 
 
 def create_plot(in_tree):  # 画图函数
@@ -244,6 +244,6 @@ arrow_args = dict(arrowstyle="<-")
 # print(get_num_leafs(retrieve_tree(0)))
 # print(get_tree_depth(retrieve_tree(0)))
 # 正式绘图
+print('生成树的叶节点总数为：',get_num_leafs(create_tree(myDat, Labels)))
+print('生成树的树高为：',get_tree_depth(create_tree(myDat, Labels)))
 create_plot(create_tree(myDat, Labels))
-print(get_num_leafs(create_tree(myDat, Labels)))
-print(get_tree_depth(create_tree(myDat, Labels)))
