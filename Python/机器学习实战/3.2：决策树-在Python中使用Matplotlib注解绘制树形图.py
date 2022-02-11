@@ -173,7 +173,21 @@ def get_num_leafs(my_tree):  # 获取叶节点的数目
     return num_leafs
 
 
-def get_tree_depth(my_tree):  # 获取树的层数
+# def get_tree_depth(my_tree):  # 获取树的树高（包括叶节点）
+#     max_depth = 0  # 初始化树的层数=0
+#     first_str = list(my_tree)[0]  # first_str指向第一个index
+#     try:
+#         second_dict = my_tree[first_str]  # second_dict指向索引为first_str的值
+#         for key in second_dict.keys():
+#             this_depth = get_tree_depth(second_dict[key]) + 1
+#             if this_depth > max_depth:
+#                 max_depth = this_depth
+#     except TypeError:
+#         max_depth = 1
+#     return max_depth
+
+
+def get_tree_depth(my_tree):  # 获取树的树高（实际上不包括叶节点，绘图需要的也是这个）
     max_depth = 0  # 初始化树的层数=0
     first_str = list(my_tree)[0]  # first_str指向第一个index
     second_dict = my_tree[first_str]  # second_dict指向第一个值
@@ -195,7 +209,7 @@ def retrieve_tree(i):  # 预先存储树的信息（用于测试）
 def plot_mid_text(cntr_pt, parent_pt, txt_string):  # 在父与子节点中间填充文本信息
     x_mid = (parent_pt[0] - cntr_pt[0]) / 2.0 + cntr_pt[0]
     y_mid = (parent_pt[1] - cntr_pt[1]) / 2.0 + cntr_pt[1]
-    create_plot.ax1.text(x_mid, y_mid+0.03, txt_string, va="center", ha="center", rotation=0)
+    create_plot.ax1.text(x_mid, y_mid + 0.03, txt_string, va="center", ha="center", rotation=0)
 
 
 def create_plot(in_tree):  # 画图函数
@@ -244,6 +258,6 @@ arrow_args = dict(arrowstyle="<-")
 # print(get_num_leafs(retrieve_tree(0)))
 # print(get_tree_depth(retrieve_tree(0)))
 # 正式绘图
-print('生成树的叶节点总数为：',get_num_leafs(create_tree(myDat, Labels)))
-print('生成树的树高为：',get_tree_depth(create_tree(myDat, Labels)))
+print('生成树的叶节点总数为：', get_num_leafs(create_tree(myDat, Labels)))
+print('生成树的树高为：', get_tree_depth(create_tree(myDat, Labels)))
 create_plot(create_tree(myDat, Labels))
