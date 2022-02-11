@@ -61,7 +61,6 @@ def hand_writing_class_test():  # 手写分类器测试代码
             error_count += 1.0
             result = ',错误,当前错误数为：' + str(error_count)
         print("分类器返回的值为:%d,正确答案为:%d" % (classifier_result, class_num_int) + result)
-
     print("\n总错误数为：%d" % error_count)
     print("\n总错误率为：%f" % (error_count / float(m_test)))
 
