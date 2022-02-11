@@ -19,7 +19,6 @@
 #    更多输出来观察变量的值
 #    Provides a simple way to draw a scatter diagram.（didn't provide that about 3D, although it is also implemented in the corresponding file）
 #    提供了简单的方式来画散点图（没有打包3D的画法，虽然对应文件里也实现了）
-
 import numpy
 import operator
 import os
