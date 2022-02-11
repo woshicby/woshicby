@@ -29,7 +29,21 @@ def get_num_leafs(my_tree):  # 获取叶节点的数目
     return num_leafs
 
 
-def get_tree_depth(my_tree):  # 获取树的层数
+# def get_tree_depth(my_tree):  # 获取树的树高（包括叶节点）
+#     max_depth = 0  # 初始化树的层数=0
+#     first_str = list(my_tree)[0]  # first_str指向第一个index
+#     try:
+#         second_dict = my_tree[first_str]  # second_dict指向索引为first_str的值
+#         for key in second_dict.keys():
+#             this_depth = get_tree_depth(second_dict[key]) + 1
+#             if this_depth > max_depth:
+#                 max_depth = this_depth
+#     except TypeError:
+#         max_depth = 1
+#     return max_depth
+
+
+def get_tree_depth(my_tree):  # 获取树的树高（实际上不包括叶节点，绘图需要的也是这个）
     max_depth = 0  # 初始化树的层数=0
     first_str = list(my_tree)[0]  # first_str指向第一个index
     second_dict = my_tree[first_str]  # second_dict指向第一个值
