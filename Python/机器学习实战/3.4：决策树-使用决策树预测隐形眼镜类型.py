@@ -2,6 +2,7 @@ import math
 import operator
 import matplotlib
 import matplotlib.pyplot as plt
+
 # #####设置区域#####
 # 设置路径
 filePath = r'D:\Desktop\新建文件夹\machinelearninginaction3x-master\Ch03'  # 生成树的存储路径
@@ -284,16 +285,20 @@ def grab_tree(filename):  # 取出决策树
 
 
 # #####以上是决策树使用和存储的函数#####
+def file2matrix(filename):  # 文件转矩阵
+    file = open(filename)
+    file_lines = file.readlines()
+    translate_dictionary = {'young': '年轻人', 'presbyopic': '老年人', 'pre': '学龄前', 'myope': '近视眼', 'hyper': '美观需求', 'yes': '是', 'no lenses': '不建议戴\n隐形眼镜', 'normal': '正常', 'no': '否', 'reduced': '偏少', 'soft': '可戴软质\n隐形眼镜', 'hard': '可戴硬质\n隐形眼镜'}  # 字典型
+    for key, value in translate_dictionary.items():
+        for numOfLines in range(len(file_lines)):
+            file_lines[numOfLines] = file_lines[numOfLines].replace(key, value)
+    lenses = [inst.strip().split('\t') for inst in file_lines]
+    return lenses
+
+
 # #####运行区域#####
-file = open(sourceFilePath)
-fileLines = file.readlines()
-lenses_dictionary = {'young': '年轻人', 'presbyopic': '老年人', 'pre': '学龄前', 'myope': '近视眼', 'hyper': '美观需求', 'yes': '是', 'no lenses': '不建议戴\n隐形眼镜', 'normal': '正常', 'no': '否', 'reduced': '偏少', 'soft': '可戴软质\n隐形眼镜', 'hard': '可戴硬质\n隐形眼镜'}  # 字典型
-for key, value in lenses_dictionary.items():
-    for numOfLines in range(len(fileLines)):
-        fileLines[numOfLines] = fileLines[numOfLines].replace(key, value)
-lenses = [inst.strip().split('\t') for inst in fileLines]
 lensesLabels = ['年龄', '需求', '散光水平', '眼泪量']
-lensesTree = create_tree(lenses, lensesLabels)
+lensesTree = create_tree(file2matrix(sourceFilePath), lensesLabels)
 print('----------进行存取测试测试----------')
 store_tree(lensesTree, filePath + '/%s' % fileName)
 print('存入决策树为：', lensesTree)
