@@ -1,4 +1,5 @@
-# Created on Sep 16, 2010
+# Created on Sep 16, 2010/创建于2010年9月16日
+# Translated on Feb 11, 2022/翻译于2022年2月11日
 # kNN: k Nearest Neighbors/k近邻算法
 #
 # Input/输入:      inX: vector to compare to existing dataset/与现有数据集进行比较的向量(1xN)
