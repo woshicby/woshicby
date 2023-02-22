@@ -1,4 +1,4 @@
-This is BY./我是BY
+This is By./我是by
 
 Just some code for practice here now./在这只是传一些练习用代码罢了
 <!---
